@@ -5,7 +5,6 @@ import openai, os
 load_dotenv()
 
 key_ = os.getenv('KEY_')
-print('TESTEEEEEEE:', key_)
 app = Flask(__name__)
 openai.api_key = key_
 
@@ -29,5 +28,5 @@ def result():
 
 if __name__ == '__main__':
     app.run(
-        host='localhost', port=8080
+        host='0.0.0.0:3030'
     )
