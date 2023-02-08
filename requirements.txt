@@ -39,7 +39,6 @@ preshed==3.0.8
 pydantic==1.10.4
 pyinstaller==5.7.0
 pyinstaller-hooks-contrib==2022.15
-pypiwin32==223
 PyQt5==5.15.8
 PyQt5-Qt5==5.15.2
 PyQt5-sip==12.11.1
