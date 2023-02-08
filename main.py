@@ -28,6 +28,6 @@ def result():
 
 if __name__ == '__main__':
     app.run(
-        host='0.0.0.0',
+        host='web-production-02423.up.railway.app',
         port=3030
     )
