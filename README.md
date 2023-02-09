@@ -12,37 +12,31 @@
 
 ### Instalação 🔧
 
-    Clone o repositório do GitHub com o seguinte comando:
+### Clone o repositório do GitHub com o seguinte comando:
+    
+    git clone https://github.com/OtavioWc7/mychatgpt-023.git
 
-### bash
+### Instale as dependências com o seguinte comando:
 
-### git clone https://github.com/OtavioWc7/mychatgpt-023.git
+    pip install -r requirements.txt
 
-    Instale as dependências com o seguinte comando:
+### Adicione sua chave de API do OpenAI no arquivo .env
 
-### pip install -r requirements.txt
+    KEY_ = SUA_CHAVE
 
-    Adicione sua chave de API do OpenAI no arquivo .env
+### Execute o arquivo main.py com o seguinte comando:
 
-### makefile
+    python app.py
 
-> KEY_ = SUA_CHAVE
+### Abra o navegador e acesse o endereço http://localhost:5000/
 
-    Execute o arquivo main.py com o seguinte comando:
-
-### python app.py
-
-    Abra o navegador e acesse o endereço http://localhost:5000/
-
-### Como funciona 💻
+## Como funciona 💻
 
 ### A aplicação funciona da seguinte maneira:
 
-    O usuário acessa a página inicial (http://localhost:5000/), que exibe um formulário HTML para digitar a frase.
-
-    Quando o usuário submete o formulário, o servidor Flask recebe a solicitação e usa o API do OpenAI para completar a frase.
-
-    O servidor Flask retorna a resposta do API do OpenAI à página inicial, que é exibida na tela.
+<p>O usuário acessa a página inicial (http://localhost:5000/), que exibe um formulário HTML para digitar a frase.
+Quando o usuário submete o formulário, o servidor Flask recebe a solicitação e usa o API do OpenAI para completar a frase.
+O servidor Flask retorna a resposta do API do OpenAI à página inicial, que é exibida na tela.</p>
 
 ### Arquivos importantes 📁
 
