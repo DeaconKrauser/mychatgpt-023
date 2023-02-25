@@ -14,7 +14,7 @@
 
 ### Clone o repositório do GitHub com o seguinte comando:
     
-    git clone https://github.com/OtavioWc7/mychatgpt-023.git
+    git clone https://github.com/DeaconKrauser/mychatgpt-023.git
 
 ### Instale as dependências com o seguinte comando:
 
