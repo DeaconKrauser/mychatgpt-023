@@ -26,7 +26,7 @@
 
 ### Execute o arquivo main.py com o seguinte comando:
 
-    python app.py
+    python main.py
 
 ### Abra o navegador e acesse o endereço http://localhost:5000/
 
