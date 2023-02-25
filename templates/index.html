@@ -7,23 +7,104 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <style>
+      /* #result {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        white-space: pre-wrap;
+      } */
+      body {
+        background-color: #5c5c5c;
+      }
+      #result {
+        display: none;
+        color: white;
+        background-color: black;
+        padding: 1em;
+        white-space: pre-line;
+        border-radius: 5px;
+        margin-top: 60px;
+      }
+      #result.show {
+        display: block;
+      }
 
+      .container {
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        border-radius: 15px;
+        background-color: rgb(207, 207, 207);
+        box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+      }
+      /* button[type=submit] {
+        visibility: hidden;
+      } */
+      .dark .dark\:text-white {
+        --tw-text-opacity: 1;
+        color: rgba(255,255,255,var(--tw-text-opacity));
+      }
+      .dark .dark\:bg-gray-700 {
+        --tw-bg-opacity: 1;
+        background-color: rgba(64,65,79,var(--tw-bg-opacity));
+      }
+      .dark .dark\:border-gray-900\/50 {
+        border-color: rgba(32,33,35,.5);
+      }
+      .rounded-md {
+        border-radius: .375rem;
+      }
+      *, ::after, ::before {
+      border: 0 solid #d9d9e3;
+        border-top-color: rgb(217, 217, 227);
+        border-top-width: 0px;
+        border-right-color: rgb(217, 217, 227);
+        border-right-width: 0px;
+        border-bottom-color: rgb(217, 217, 227);
+        border-bottom-width: 0px;
+        border-left-color: rgb(217, 217, 227);
+        border-left-width: 0px;
+      box-sizing: border-box;
+    }
+      textarea {
+        resize: none;
+        border: 1px solid #000000;
+        background: #000000;
+        
+    }
+    button {
+      position: relative;
+      left: 1060px;
+      margin-top: -119px;
+      background:  rgb(46, 46, 46);
+      width: 40px;
+      height: 10px;
+      top: 75px
+    }
+    
+    </style>
+    
     <title>mychatgpt</title>
   </head>
   <body>
     <div class="container">
-      <h1>Chat GPT</h1>
+      <h1 style="position: relative; bottom: -50px;">PéDeVento</h1>
       <form>
         <div class="form-group">
-          <label for="prompt">Prompt:</label>
-          <input type="text" class="form-control" id="prompt" name="prompt">
+          <!-- <label for="prompt">Prompt:</label> -->
+          <input type="input" class="form-control" id="prompt" name="prompt" style="position: relative;resize: none;background-color: rgb(46, 46, 46);color:#fff;height: 50px;bottom: -80px;" rows="1" placeholder=""></input>
         </div>
-        <button type="submit" class="btn btn-primary" id="submit">Enviar</button>
+        <button type="submit" class="btn" id="submit"><svg style="color: white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z" fill="white"></path> </svg></button>
+        
+        
+        <!-- <textarea tabindex="0" data-id="request-:r1:-9" ></textarea> -->
+        
       </form>
-      <hr>
-      <h2>Resultado:</h2>
-      <pre id="result"></pre>
+      
+      <!-- <pre id="result"></pre> -->
+      <pre id="result" class="result-display"></pre>
     </div>
 
     <!-- Optional JavaScript -->
@@ -41,7 +122,7 @@
 
         $.post('/result', {prompt: prompt})
           .done(function(data) {
-            $('#result').text(data);
+            $('#result').text(data).addClass('show');
           });
       });
     </script>
